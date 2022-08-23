@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3406/3406898.png">
+    <script src="https://kit.fontawesome.com/9f21c16a5c.js" crossorigin="anonymous"></script>
+    <title>QuizQuest</title>
+</head>
+<body>
+    <div id="menu" class="menu">
+        <div class="contMenu">
+            <h1 class="h1">QuizQuest</h1>
+            <button id="btnIniciar" class="btnMenu">Jogar</button>
+        </div>
+    </div>
+    <div id="quiz" class="quiz">
+        <div class="contQuiz">
+            <div class="pontos"><samp id="marcPontos">0 PT</samp></div>
+            <header>
+                <h1 class="titulo">QuizQuest</h1>
+                <h2 id="cronometro" class="cronometro">1:00</h2>
+            </header>
+            <main class="main" id="main">
+                <h2 id="pergunta" class="pergunta">Pergunta</h2>
+                <ol id="alternativas" class="alternativa">
+                    <button class="btn" id="A" value="a" >Lorem ipsum dolor sit amet</button>
+                    <button class="btn" id="B" value="b" >Lorem ipsum dolor sit amet</button>
+                    <button class="btn" id="C" value="c" >Lorem ipsum dolor sit amet</button>
+
+                    <div class="confirm" id="confirm">
+                        <div class="contConfirm">
+                            <h1 class="h1confirm">Você quer voltar ao menu inicial</h1>
+                                <div class="cont">
+                                    <div id="btnConfirm">
+                                        <img src="./icons/confirme.png" alt="" class="imgConfirm">
+                                    </div>
+                                    <div id="btnRejeita">
+                                        <img src="./icons/rejeitar.png" alt="" class="imgRejeita">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </ol>
+            </main>
+            <footer>
+                <p id="nquestao" class="questao">Numero da questão: 1</p>
+                <div class="reiniciar">
+                    <i class="fa-solid fa-circle-left fa-4x" id="btnReiniciar"></i>
+                </div>
+            </footer>
+        </div>
+    </div> 
+    <div class="placar" id="pontos">
+        <div class="cont_placar" >
+            <h1 class="h1_fim">Pontos</h1>
+            <ol class="ol_placar">
+                <li class="li_placar" id="li_placar">Pontiskk</li>
+            </ol>
+            <button class="btn_placar" id="continuar">Continuar</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
