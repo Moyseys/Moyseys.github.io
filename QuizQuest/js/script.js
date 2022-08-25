@@ -156,7 +156,7 @@ const vetQuiz = [
     correta:'c'
 },
 {
-    pergunta:'Qual o nome do cientista que descobriu o processo <br> de pasteurização e a vacina contra a raiva?',
+    pergunta:'Qual o nome do cientista que descobriu o processo de pasteurização e a vacina contra a raiva?',
     a:'Marie Curie',
     b:'Louis Pasteur',
     c:'Antoine Lavoisier',
@@ -190,7 +190,7 @@ function desbloquear(){
 }
 
 btnIniciar.addEventListener('click',iniciar)
-btnReiniciar.addEventListener('click',function(){
+btnReiniciar.addEventListener('click',() => {
     confirm.style.display = ('block')
     bloquear()
 })
@@ -229,10 +229,9 @@ let pintar = [a, b, c]
 function iniciar(){
     menu.style.display = ('none')
     quiz.style.display = ('block')
+    tempo()
     enbaralhar()
     quest()
-    tempo()
-    console.log(questoes)
 }
 
 function reiniciar(){
@@ -255,24 +254,23 @@ function placarFinal(){
     placar.style.display = ('block')
 
     if(pontos <= 30){
-        placarPontos.innerHTML = (`${pontos} Pontos -_- <br> Por favor pensar na proxima 👍`)
+        placarPontos.innerHTML += (`${pontos} Pontos -_- <br> Por favor pensar na proxima 👍`)
     }
     else if(pontos > 30 && pontos <= 50){
-        placarPontos.innerHTML = (`${pontos} Pontos <br> Mais sorte da proxima vez`)
+        placarPontos.innerHTML += (`${pontos} Pontos <br> Mais sorte da proxima vez`)
     }
     else if(pontos > 50 && pontos <= 80){
-        placarPontos.innerHTML = (`${pontos} Pontos <br> Boa!!`)
+        placarPontos.innerHTML += (`${pontos} Pontos <br> Boa!!`)
     }
     else if(pontos > 80 && pontos <= 100){
-        placarPontos.innerHTML = (`${pontos} Pontos <br> EXCELENTE!!`)
+        placarPontos.innerHTML += (`${pontos} Pontos <br> EXCELENTE!!`)
     }
     
 }
 
-let minu = 1
-let seg = 1
-
 async function tempo(){
+    let minu = 1
+    let seg = 0
     interval = setInterval(function(){
         seg--
         if(seg <= 0){
@@ -281,10 +279,13 @@ async function tempo(){
                 seg = 59
             }
             else{
+                placarPontos.innerHTML = ('Seu tempo se esgotou <br><br>')
                 placarFinal()
+                confirm.style.display = ('none')
                 clearInterval(interval)
             }
         }
+        seg = seg < 10 ? '0' + seg : seg
         cronometro.innerHTML = (`${minu}:${seg}`)
     },1000)
 }
@@ -306,13 +307,10 @@ function verificar(){//verifica se a resposta selecionada esta correta
 
     if(correta == click){
         pontos = pontos + 10
-        console.log('Acertou')
         marcPontos.innerHTML = (`${pontos} PT`)
         main.style.borderColor = ('green')
     }
     else{
-        console.log('Errou')
-        console.log(pontos)
         main.style.borderColor = ('red')
     }
     i++

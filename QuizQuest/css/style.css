@@ -31,6 +31,7 @@ body{
     }
     .btnMenu:hover{
         background-color: rgb(187, 130, 241);
+        color: floralwhite;
     }
     .contMenu{
         display: flex;
@@ -42,7 +43,7 @@ body{
         height: 100vh;
     }
 
-/* QUIZ */
+/* Q.btn:hoverUIZ */
     .quiz{
         position: relative;
         background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -61,17 +62,17 @@ body{
         
     }
     .pontos{
-        font-size: 40px;
+        font-size: 30px;
         margin-top: 5%;
     }
     .titulo{
         margin-top: 15%;
-        font-size: 70px;
+        font-size: 50px;
         border-bottom: 3px solid white;
     }
     .pergunta{
         margin-bottom: 30px;
-        font-size: 40px;
+        font-size: 30px;
     }
     .main{
         margin-top: 50px;
@@ -90,7 +91,7 @@ body{
         width: 100%;
         height: 40px;
 
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
 
         border-radius: 5px;
@@ -98,7 +99,6 @@ body{
         cursor: pointer;
     }
     .btn:hover{
-        background-color: rgb(255, 255, 255);
         width: 100%;
         height: 40px;
         text-align: center;
@@ -110,7 +110,7 @@ body{
         margin-top: 5px;
     }
     i{
-        margin-top: 50%;
+        margin-top: 20%;
         cursor: pointer;
     }
     .cronometro{
@@ -122,7 +122,7 @@ body{
         position: absolute;
         flex-direction: column;
         align-items: center;
-        border-radius:30px ;
+        border-radius:10px ;
         background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
       
         
@@ -184,19 +184,23 @@ body{
     .btn_placar{
         margin-top: 70px;
         border: none;
-        font-size: 50px;
+        font-size: 40px;
         padding: 20px;
         border-radius: 5px;
+    }
+    .btn_placar:hover{
+        background-color: rgb(187, 130, 241);
+        color: floralwhite;
     }
     .h1_fim{
         color: #ffffff;
         margin-top: 90px;
-        font-size: 80px;
+        font-size: 70px;
     }
     .li_placar{
         list-style-type: none;
         color: #ffffff;
-        font-size: 40px;
+        font-size: 30px;
         padding: 10px;
         text-align: center;
     }
@@ -266,6 +270,7 @@ body{
         flex-direction: column;
         align-items: center;
     }
+    
     .btn{
         margin-bottom: 5px;
         width: 100%;
@@ -277,6 +282,10 @@ body{
         border-radius: 5px;
         border: none;
         cursor: pointer;
+        color: black;
+    }
+    .btn:hover{
+        color: black;
     }
     .questao{
         font-size: 20px;
@@ -309,6 +318,54 @@ body{
         font-size: 20px;
         padding: 10px;
         text-align: center;
+    }
+    /* Confirm media */
+    .confirm{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        border-radius:10px ;
+        background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+      
+        
+    }
+    .contConfirm{
+        border: white 3px solid;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        
+    }
+    .cont{
+        column-gap: 15px;
+        display: flex;
+        flex-direction: row;
+    }
+    .h1confirm{
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 30px;
+        color: #ffffff;
+    }
+    .imgConfirm{
+        width: 50px;
+    }
+    .imgConfirm:hover{
+        width: 50px;
+        background-color: #52ff5a;
+        border-radius: 70%;
+    }
+    .imgRejeita{
+        width: 50px;
+    }
+    .imgRejeita:hover{
+        background-color: #f25555;
+        border-radius: 70%;
     }
 
 }
