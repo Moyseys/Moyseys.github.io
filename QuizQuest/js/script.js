@@ -128,7 +128,7 @@ const vetQuiz = [
     correta:'c'
 },
 {
-    pergunta:'Qual foi o recurso utilizado inicialmente pelo homem <br> para explicar a origem das coisas?',
+    pergunta:'Qual foi o recurso utilizado inicialmente pelo homem para explicar a origem das coisas?',
     a:'A Filosofia',
     b:'A Biologia',
     c:'A Mitologia',
@@ -238,6 +238,7 @@ function reiniciar(){
     menu.style.display = ('block')
     placar.style.display = ('none')
     quiz.style.display = ('none')
+    placarPontos.innerHTML = ('')
     questao = 0
     i = 0
     pontos = 0 
