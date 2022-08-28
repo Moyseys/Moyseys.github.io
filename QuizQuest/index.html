@@ -10,12 +10,42 @@
     <title>QuizQuest</title>
 </head>
 <body>
+    <!-- Audios -->
+    <div>
+        <audio src="" id="aplausos" ></audio>
+        <audio src="" id="negative" ></audio>
+        <audio src="" id="positive">></audio>
+    </div>
+    <!-- Menu -->
     <div id="menu" class="menu">
         <div class="contMenu">
-            <h1 class="h1">QuizQuest</h1>
-            <button id="btnIniciar" class="btnMenu">Jogar</button>
+            <div class="menu-hamburguer-conteudo" id="menu-hamburguer-conteudo">
+                <div class="contconteudo" id="contmusica">
+                    <li>Musica</li>
+                    <input type="button" id="btnmusica" class="">
+                </div>
+                <div class="contconteudo">
+                    <li>Ranking</li>
+                </div>
+                <div class="contconteudo">
+                    <li>Perguntas</li>
+                </div>
+                <div class="contconteudo">
+                    <li>Social  </li>
+                </div>
+            </div>
+            <div class="menu-hamburguer" id="menu-hamburguer">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="contmenu-principal">
+                <h1 class="h1">QuizQuest</h1>
+                <button id="btnIniciar" class="btnMenu">Jogar</button>
+            </div>
         </div>
     </div>
+    <!-- Quiz -->
     <div id="quiz" class="quiz">
         <div class="contQuiz">
             <div class="pontos"><samp id="marcPontos">0 PT</samp></div>
@@ -52,7 +82,8 @@
                 </div>
             </footer>
         </div>
-    </div> 
+    </div>
+    <!-- Placar -->
     <div class="placar" id="pontos">
         <div class="cont_placar" >
             <h1 class="h1_fim">Pontos</h1>
@@ -62,6 +93,8 @@
             <button class="btn_placar" id="continuar">Continuar</button>
         </div>
     </div>
+
+
     <script src="js/script.js"></script>
 </body>
 </html>

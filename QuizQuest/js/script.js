@@ -13,7 +13,12 @@ let contConfirm = document.getElementsByClassName('contConfirm')
 let btnConfirm = document.getElementById('btnConfirm')
 let btnRejeita = document.getElementById('btnRejeita')
 
+let positive = document.getElementById('positive')
+let negative = document.getElementById('negative')
+let aplausos = document.getElementById('aplausos')
 
+let menuHamburguer = document.getElementById('menu-hamburguer')
+let menuHamburguerConteudo = document.getElementById('menu-hamburguer-conteudo')
 
 let i = 0
 let correta
@@ -202,7 +207,22 @@ btnRejeita.addEventListener('click',() => {
     confirm.style.display = ('none')
     desbloquear()
 })
-
+menuHamburguer.addEventListener('click',() => {
+    menuHamburguerConteudo.classList.toggle('active')
+})
+btnmusica.addEventListener('click',(e) => {
+    e.target.classList.toggle('select')
+    if(e.target.classList == 'select'){
+        aplausos.setAttribute('src','audios/aplausos.mp3')
+        negative.setAttribute('src','audios/negative.mp3')
+        positive.setAttribute('src','audios/positive.mp3')
+    }
+    else{
+        aplausos.setAttribute('src','/')
+        negative.setAttribute('src','/')
+        positive.setAttribute('src','/')
+    }
+})
 continuar.addEventListener('click',reiniciar)
 
 
@@ -262,9 +282,11 @@ function placarFinal(){
     }
     else if(pontos > 50 && pontos <= 80){
         placarPontos.innerHTML += (`${pontos} Pontos <br> Boa!!`)
+        aplausos.play()
     }
     else if(pontos > 80 && pontos <= 100){
         placarPontos.innerHTML += (`${pontos} Pontos <br> EXCELENTE!!`)
+        aplausos.play()
     }
     
 }
@@ -310,9 +332,15 @@ function verificar(){//verifica se a resposta selecionada esta correta
         pontos = pontos + 10
         marcPontos.innerHTML = (`${pontos} PT`)
         main.style.borderColor = ('green')
+        if(btnmusica.classList == 'select'){
+            positive.play()
+        }
     }
     else{
         main.style.borderColor = ('red')
+        if(btnmusica.classList == 'select'){
+            negative.play()
+        }
     }
     i++
 }
