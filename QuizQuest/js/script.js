@@ -35,6 +35,9 @@ let a = document.querySelector('#A')
 let b = document.querySelector('#B')
 let c = document.querySelector('#C')
 
+let h1Correta = document.getElementById('corretas')
+let h1Errada = document.getElementById('erradas')
+
 
 const vetQuiz = [
 {
@@ -280,11 +283,6 @@ function reiniciar(){
 }
 
 function placarFinal(){
-    let h1Correta = document.getElementById('corretas')
-    let h1Errada = document.getElementsByClassName('erradas')
-
-    h1Correta.innerHTML = (acertos)
-    h1Errada.innerHTML = (erros)
 
     quiz.style.display = ('none') 
     placar.style.display = ('block')
@@ -303,6 +301,11 @@ function placarFinal(){
         placarPontos.innerHTML += (`${pontos} Pontos <br> EXCELENTE!!`)
         aplausos.play()
     }
+
+    
+    h1Errada.innerHTML = (erros)
+    h1Correta.innerHTML = (acertos)
+    console.log(acertos, erros)
     
 }
 
