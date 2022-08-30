@@ -21,7 +21,7 @@
         <div class="contMenu">
             <div class="menu-hamburguer-conteudo" id="menu-hamburguer-conteudo">
                 <div class="contconteudo" id="contmusica">
-                    <li>Musica</li>
+                    <li>Sons</li>
                     <input type="button" id="btnmusica" class="">
                 </div>
                 <div class="contconteudo">
@@ -86,11 +86,30 @@
     <!-- Placar -->
     <div class="placar" id="pontos">
         <div class="cont_placar" >
-            <h1 class="h1_fim">Pontos</h1>
-            <ol class="ol_placar">
-                <li class="li_placar" id="li_placar"></li>
-            </ol>
-            <button class="btn_placar" id="continuar">Continuar</button>
+            <div class="cardPlacar">
+                <h1 class="h1_fim">Completado</h1>
+                <ol class="ol_placar">
+                    <li class="li_placar" id="li_placar">50 Pontos <br> Mais sorte da proxima vez</li>
+                </ol>
+                    <div class="contAcertos">
+                        <div id="" class="contCorretas">
+                            <div>
+                                <img src="./icons/confirme.png" alt="" class="imgCorreta">
+                                <h1>Coretas</h1>
+                            </div>
+                            <h1 class="corretas" id="corretas">4</h1>
+                        </div>
+
+                        <div id="" class="contErradas">
+                            <div>
+                                <img src="./icons/rejeitar.png" alt="" class="imgErrada">
+                                <h1 >Erradas</h1>
+                            </div>
+                            <h1 class="erradas" id="erradas">0</h1>
+                        </div>
+                    </div>
+                <button class="btn_placar" id="continuar">Continuar</button>
+            </div>
         </div>
     </div>
 

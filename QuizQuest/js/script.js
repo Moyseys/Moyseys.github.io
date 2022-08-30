@@ -25,6 +25,8 @@ let correta
 let questao = 0
 let click 
 let pontos = 0
+let acertos = 0
+let erros = 0
 
 let nquestao = document.querySelector('#nquestao')
 let h1Pergunta = document.querySelector('#pergunta')
@@ -32,6 +34,7 @@ let alternativa = document.querySelectorAll('[alternativa]')
 let a = document.querySelector('#A')
 let b = document.querySelector('#B')
 let c = document.querySelector('#C')
+
 
 const vetQuiz = [
 {
@@ -193,23 +196,28 @@ function desbloquear(){
     b.removeAttribute('disabled','disabled')
     c.removeAttribute('disabled','disabled')
 }
-
+//inicar
 btnIniciar.addEventListener('click',iniciar)
+//Monitora o btn de reiniciar
 btnReiniciar.addEventListener('click',() => {
     confirm.style.display = ('block')
     bloquear()
 })
+//Monitora o botao confirm de reiniciar
 btnConfirm.addEventListener('click',() => {
     reiniciar()
     confirm.style.display = ('none')
 })
+//Monitora o botao rejeitar de reiniciar
 btnRejeita.addEventListener('click',() => {
     confirm.style.display = ('none')
     desbloquear()
 })
+//Menu Hamburguer
 menuHamburguer.addEventListener('click',() => {
     menuHamburguerConteudo.classList.toggle('active')
 })
+
 btnmusica.addEventListener('click',(e) => {
     e.target.classList.toggle('select')
     if(e.target.classList == 'select'){
@@ -223,8 +231,8 @@ btnmusica.addEventListener('click',(e) => {
         positive.setAttribute('src','/')
     }
 })
+//Continuar
 continuar.addEventListener('click',reiniciar)
-
 
 let questoes = []
  
@@ -258,6 +266,7 @@ function reiniciar(){
     menu.style.display = ('block')
     placar.style.display = ('none')
     quiz.style.display = ('none')
+    menuHamburguerConteudo.classList.remove('active')
     placarPontos.innerHTML = ('')
     questao = 0
     i = 0
@@ -271,6 +280,12 @@ function reiniciar(){
 }
 
 function placarFinal(){
+    let h1Correta = document.getElementById('corretas')
+    let h1Errada = document.getElementsByClassName('erradas')
+
+    h1Correta.innerHTML = (acertos)
+    h1Errada.innerHTML = (erros)
+
     quiz.style.display = ('none') 
     placar.style.display = ('block')
 
@@ -330,13 +345,16 @@ function verificar(){//verifica se a resposta selecionada esta correta
 
     if(correta == click){
         pontos = pontos + 10
+        acertos = acertos + 1
         marcPontos.innerHTML = (`${pontos} PT`)
         main.style.borderColor = ('green')
+
         if(btnmusica.classList == 'select'){
             positive.play()
         }
     }
     else{
+        erros = erros + 1
         main.style.borderColor = ('red')
         if(btnmusica.classList == 'select'){
             negative.play()
