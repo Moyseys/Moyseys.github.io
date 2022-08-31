@@ -78,10 +78,9 @@ body{
     .h1{
         margin-top: 300px;
         color: white;
-        
         font-size: 90px;
-        
     }
+
     .btnMenu{
         margin-top: 70px;
         border: none;
@@ -90,7 +89,8 @@ body{
         border-radius: 5px;
     }
     .btnMenu:hover{
-        background-color: rgb(187, 130, 241);
+        background-color: rgb(69, 34, 105);
+        box-shadow: 0px 0px 10px 1px #ffffff;
         color: floralwhite;
     }
     .contmenu-principal{
@@ -105,8 +105,52 @@ body{
         backdrop-filter: blur(20px);
         height: 100vh;
     }
+/* Modos */
+    .imgModos{
+        background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        position: absolute;
 
-/* Q.btn:hoverUIZ */
+        margin-top: 350px;
+        border-radius: 10px;
+        border: 3px solid #fff;
+        width: 50%;
+        height: 30%;
+
+        display: none;
+    }
+    .modos{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+
+        width: 100%;
+        height: 100%;
+    }
+    .modos p, .modos h3{
+        color: #ffffff;
+    }
+    .modos h3{
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+        font-size: 25px;
+        text-align: center;
+    }
+    .modos p{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 2%;
+        width: 400px;
+        padding: 10px;
+    }
+    .modos p:hover{
+        background-color: #ffffff;
+        border-radius: 10px;
+        color: #24245f;
+    }
+/* Quiz */
     .quiz{
         position: relative;
         background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
@@ -284,7 +328,8 @@ body{
         text-align: center;
         width: 600px ;
 
-        background: rgb(69, 34, 105);
+
+        background: linear-gradient(-45deg, rgba(34,43,96,1) 0%, rgba(2,0,36,1) 89%);
         border-radius: 5px;
         padding: 10px;
     }
@@ -482,6 +527,51 @@ body{
         font-size: 30px;
         padding: 10px;
         border-radius: 5px;
+    }
+    /* Modos media */
+    .imgModos{
+        background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        position: absolute;
+
+        margin-top: 200px;
+        border-radius: 10px;
+        border: 3px solid #fff;
+        width: 70%;
+        height: 35%;
+
+        display: none;
+    }
+    .modos{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+
+        width: 100%;
+        height: 100%;
+    }
+    .modos p, .modos h3{
+        color: #ffffff;
+    }
+    .modos h3{
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .modos p{
+        text-align: center;
+        font-size: 10px;
+        margin-top: 10%;
+        width: 100px;
+        padding: 5px 15px 5px 15px;
+    }
+    .modos p:hover{
+        background-color: #ffffff;
+        border-radius: 10px;
+        color: #24245f;
     }
     /* Quiz media */
     .pontos{

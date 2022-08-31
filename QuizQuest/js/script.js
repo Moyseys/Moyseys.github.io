@@ -12,6 +12,7 @@ let confirm = document.getElementById("confirm")
 let contConfirm = document.getElementsByClassName('contConfirm')
 let btnConfirm = document.getElementById('btnConfirm')
 let btnRejeita = document.getElementById('btnRejeita')
+let cardModos = document.getElementById('modos')
 
 let positive = document.getElementById('positive')
 let negative = document.getElementById('negative')
@@ -27,6 +28,9 @@ let click
 let pontos = 0
 let acertos = 0
 let erros = 0
+let minu = 0
+let seg = 0
+
 
 let nquestao = document.querySelector('#nquestao')
 let h1Pergunta = document.querySelector('#pergunta')
@@ -45,7 +49,7 @@ const vetQuiz = [
     a:'Plana',
     b:'Redonda',
     c:'Quadrada',
-    correta:'a'
+    correta:'b'
 },
 {
     pergunta:'Austral é o mesmo que...',
@@ -200,7 +204,7 @@ function desbloquear(){
     c.removeAttribute('disabled','disabled')
 }
 //inicar
-btnIniciar.addEventListener('click',iniciar)
+btnIniciar.addEventListener('click',modos)
 //Monitora o btn de reiniciar
 btnReiniciar.addEventListener('click',() => {
     confirm.style.display = ('block')
@@ -219,6 +223,15 @@ btnRejeita.addEventListener('click',() => {
 //Menu Hamburguer
 menuHamburguer.addEventListener('click',() => {
     menuHamburguerConteudo.classList.toggle('active')
+    cardModos.style.display = ('none')
+    if(menuHamburguerConteudo.classList == 'menu-hamburguer-conteudo active'){
+        console.log('sua mae')
+        btnIniciar.setAttribute('disabled','disabled')
+    }
+    else{
+        btnIniciar.removeAttribute('disabled','disabled')
+    }
+    
 })
 
 btnmusica.addEventListener('click',(e) => {
@@ -243,9 +256,9 @@ function aleatorio(){//Gera um numero aleatorio
     return Math.round(Math.random() * 20)
 }
 
-function enbaralhar(){
+function enbaralhar(pergs){
 
-    for(let i = 0; questoes.length < 10; i++){//Executa enquanto o questoes não tiver 10 posiçãos
+    for(let i = 0; questoes.length <= pergs; i++){//Executa enquanto o questoes não tiver 10 posiçãos
         let random = aleatorio() // recebe o valor retornado da função + p
 
         if(questoes.indexOf(random) == -1){ //Verifica se à o numero gerado ja tem no questoes
@@ -257,29 +270,73 @@ function enbaralhar(){
 let vetalt = ['a', 'b', 'c']
 let pintar = [a, b, c]
 
+let facil = document.getElementById('facil')
+let medio = document.getElementById('medio')
+let dificil = document.getElementById('dificil')
+let contratempo = document.getElementById('contratempo')
+
+
+function modos(){
+    cardModos.style.display = ('block')
+    facil.addEventListener('click',() =>{
+        minu = 1
+        seg = 1
+        enbaralhar(5)
+        iniciar()
+        console.log(questoes)
+    })
+    medio.addEventListener('click',() =>{
+        minu = 1
+        seg = 0
+        enbaralhar(10)
+        iniciar()
+        console.log(questoes)
+    })
+    dificil.addEventListener('click',() =>{
+        minu = 1
+        seg = 30
+        enbaralhar(20)
+        iniciar()
+        console.log(questoes)
+    })
+    contratempo.addEventListener('click',() =>{
+        minu = 1
+        seg = 0
+        enbaralhar(20)
+        iniciar()
+        console.log(questoes)
+    })
+
+}
+
 function iniciar(){
     menu.style.display = ('none')
     quiz.style.display = ('block')
     tempo()
-    enbaralhar()
     quest()
 }
 
 function reiniciar(){
-    menu.style.display = ('block')
-    placar.style.display = ('none')
-    quiz.style.display = ('none')
-    menuHamburguerConteudo.classList.remove('active')
-    placarPontos.innerHTML = ('')
-    questao = 0
-    i = 0
-    pontos = 0 
-    minu = 1
-    seg = 1
-    marcPontos.innerHTML = (`${pontos} PT`)
-    cronometro.innerHTML = (`${minu}:00`)
-    questoes = []
-    clearInterval(interval)
+    location.reload()
+    // minu = 0
+    // seg = 0
+    // clearInterval(interval)
+    // menu.style.display = ('block')
+    // placar.style.display = ('none')
+    // quiz.style.display = ('none')
+    // cardModos.style.display = ('none')
+    // menuHamburguerConteudo.classList.remove('active')
+
+    // placarPontos.innerHTML = ('')
+    // questao = 0
+    // i = 0
+    // pontos = 0 
+    // erros = 0
+    // correta = 0
+
+    // marcPontos.innerHTML = (`${pontos} PT`)
+    // cronometro.innerHTML = (`00:00`)
+    // questoes = []
 }
 
 function placarFinal(){
@@ -310,9 +367,9 @@ function placarFinal(){
 }
 
 async function tempo(){
-    let minu = 1
-    let seg = 0
+
     interval = setInterval(function(){
+        console.log(minu,seg)
         seg--
         if(seg <= 0){
             if(minu >= 1){
@@ -332,6 +389,7 @@ async function tempo(){
 }
 
 function verificar(){//verifica se a resposta selecionada esta correta
+    
     a.setAttribute('disabled','disabled')
     b.setAttribute('disabled','disabled')
     c.setAttribute('disabled','disabled')
