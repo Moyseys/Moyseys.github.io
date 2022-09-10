@@ -113,15 +113,18 @@ body{
         margin-top: 350px;
         border-radius: 10px;
         border: 3px solid #fff;
-        width: 50%;
-        height: 30%;
+        width: 400px;
+        height: 20%;
 
         display: none;
     }
     .modos{ 
+        overflow: hidden;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
 
         backdrop-filter: blur(20px);
         border-radius: 10px;
@@ -133,17 +136,17 @@ body{
         color: #ffffff;
     }
     .modos h3{
+        padding: 1em;
         border-bottom: 1px solid white;
-        margin-top: 20px;
-        font-size: 25px;
+        /* margin-top: 20px; */
+        font-size: 1em;
         text-align: center;
     }
     .modos p{
         text-align: center;
-        font-size: 20px;
-        margin-top: 2%;
-        width: 400px;
-        padding: 10px;
+        font-size: 1.2em;
+        width: 99%;
+        padding: 0.25em;
     }
     .modos p:hover{
         background-color: #ffffff;
@@ -533,18 +536,21 @@ body{
         background-image: url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
         position: absolute;
 
-        margin-top: 200px;
+        margin-top: 150px;
         border-radius: 10px;
         border: 3px solid #fff;
-        width: 70%;
-        height: 35%;
+        width: 200px;
+        height: 250px;
 
         display: none;
     }
     .modos{ 
+        overflow: hidden;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
 
         backdrop-filter: blur(20px);
         border-radius: 10px;
@@ -556,17 +562,17 @@ body{
         color: #ffffff;
     }
     .modos h3{
+        padding: 1em;
         border-bottom: 1px solid white;
-        margin-top: 20px;
-        font-size: 15px;
+        /* margin-top: 20px; */
+        font-size: 1em;
         text-align: center;
     }
     .modos p{
         text-align: center;
-        font-size: 10px;
-        margin-top: 10%;
-        width: 100px;
-        padding: 5px 15px 5px 15px;
+        font-size: 1.2em;
+        width: 99%;
+        padding: 0.25em;
     }
     .modos p:hover{
         background-color: #ffffff;
