@@ -1,23 +1,23 @@
 {
-"name": "The name of your application",
-"short_name": "This name will show in your Windows taskbar, in the start menu, and Android homescreen",
-"start_url": "The URL that should be loaded when your application is opened",
+"name": "QuizQuest",
+"short_name": "Quiz",
+"start_url": "https://moyseys.github.io/QuizQuest/",
 "display": "standalone",
 "description": "A description for your application",
-"lang": " The default language of your application",
+"lang": "Pt-BR",
 "dir": "auto",
-"theme_color": "#000000",
-"background_color": "#000000",
+"theme_color": "#993399",
+"background_color": "#f5f5f5",
 "orientation": "any",
 "icons": [
     {
-        "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
+        "src": "https://cdn-icons-png.flaticon.com/512/3406/3406898.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
     },
     {
-        "src": "https://www.pwabuilder.com/assets/icons/icon_192.png",
+        "src": "https://cdn-icons-png.flaticon.com/512/3406/3406898.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
@@ -25,7 +25,7 @@
 ],
 "screenshots": [
     {
-        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "src": "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "sizes": "2880x1800",
         "type": "image/png",
         "description": "A screenshot of the home page"
