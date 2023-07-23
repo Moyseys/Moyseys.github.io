@@ -42,13 +42,230 @@ let c = document.querySelector('#C')
 let h1Correta = document.getElementById('corretas')
 let h1Errada = document.getElementById('erradas')
 
-
+//40
 const vetQuiz = [
+{
+pergunta: 'Qual é o símbolo químico do elemento mercúrio?',
+a: 'Mg',
+b: 'Hg',
+c: 'Me',
+correta: 'b'
+},
+{
+pergunta: "Quem escreveu a famosa peça teatral 'Hamlet'?",
+a: 'William Shakespeare',
+b: 'Anton Chekhov',
+c: 'Henrik Ibsen',
+correta: 'a'
+},
+{
+pergunta: 'Qual é o maior mamífero terrestre?',
+a: 'Elefante Africano',
+b: 'Rinoceronte Branco',
+c: 'Girafa',
+correta: 'a'
+},
+{
+pergunta: 'Em que país nasceu o famoso pintor Pablo Picasso?',
+a: 'Espanha',
+b: 'França',
+c: 'Itália',
+correta: 'a'
+},
+{
+pergunta: 'Qual é o maior osso do corpo humano?',
+a: 'Fêmur',
+b: 'Tíbia',
+c: 'Crânio',
+correta: 'a'
+},
+{
+pergunta: 'Em que país podemos encontrar a Torre Eiffel?',
+a: 'Inglaterra',
+b: 'França',
+c: 'Itália',
+correta: 'b'
+},
+{
+pergunta: 'Qual é o planeta mais próximo do Sol?',
+a: 'Vênus',
+b: 'Mercúrio',
+c: 'Marte',
+correta: 'b'
+},
+{
+pergunta: 'Quem foi o primeiro presidente dos Estados Unidos?',
+a: 'Abraham Lincoln',
+b: 'George Washington',
+c: 'Thomas Jefferson',
+correta: 'b'
+},
+{
+pergunta: 'Quem escreveu a obra "Dom Quixote"?',
+a: 'Miguel de Cervantes',
+b: 'Gabriel García Márquez',
+c: 'Jorge Luis Borges',
+correta: 'a'
+},
+{
+pergunta: 'Quem foi o famoso líder da Revolução Cubana que governou o país por décadas?',
+a: 'Che Guevara',
+b: 'Fidel Castro',
+c: 'Hugo Chávez',
+correta: 'b'
+},
+{
+pergunta: 'Qual é o maior oceano do mundo?',
+a: 'Oceano Atlântico',
+b: 'Oceano Pacífico',
+c: 'Oceano Índico',
+correta: 'b'
+},
+{
+pergunta: 'Qual é o processo de conversão direta de um sólido para gás, sem passar pelo estado líquido?',
+a: 'Fusão',
+b: 'Solidificação',
+c: 'Sublimação',
+correta: 'c'
+},
+{
+pergunta: 'Em que país nasceu o famoso físico Isaac Newton?',
+a: 'Inglaterra',
+b: 'Alemanha',
+c: 'Estados Unidos',
+correta: 'a'
+},
+{
+pergunta: 'Qual é a capital da Rússia?',
+a: 'São Petersburgo',
+b: 'Moscou',
+c: 'Kiev',
+correta: 'b'
+},
+{
+pergunta: 'Quem pintou a obra "A Noite Estrelada"?',
+a: 'Pablo Picasso',
+b: 'Vincent van Gogh',
+c: 'Leonardo da Vinci',
+correta: 'b'
+},
+{
+pergunta: 'Em qual país fica localizada a cidade de Machu Picchu?',
+a: 'Colômbia',
+b: 'Equador',
+c: 'Peru',
+correta: 'c'
+},
+{
+pergunta: 'Qual é o maior deserto do mundo?',
+a: 'Deserto de Gobi',
+b: 'Deserto do Saara',
+c: 'Deserto da Arábia',
+correta: 'b'
+},
+{
+pergunta: 'Qual foi o primeiro ser vivo a ser enviado ao espaço?',
+a: 'Cachorro',
+b: 'Macaco',
+c: 'Gato',
+correta: 'a'
+},
+{
+pergunta: 'Em que país nasceu o famoso cientista Albert Einstein?',
+a: 'Alemanha',
+b: 'Suíça',
+c: 'Áustria',
+correta: 'a'
+},
+{
+pergunta: 'Qual é o maior produtor de café do mundo?',
+a: 'Colômbia',
+b: 'Brasil',
+c: 'Vietnã',
+correta: 'b'
+},
+{
+pergunta: 'Qual é a capital da Austrália?',
+a: 'Sidney',
+b: 'Melbourne',
+c: 'Camberra',
+correta: 'c'
+},
+{
+pergunta: 'Quem pintou a Mona Lisa?',
+a: 'Leonardo da Vinci',
+b: 'Vincent van Gogh',
+c: 'Pablo Picasso',
+correta: 'a'
+},
+{
+pergunta: 'Qual é a maior lua de Júpiter?',
+a: 'Io',
+b: 'Europa',
+c: 'Ganimedes',
+correta: 'c'
+},
+{
+pergunta: 'Qual é a montanha mais alta do mundo?',
+a: 'Monte Everest',
+b: 'Monte Kilimanjaro',
+c: 'Monte K2',
+correta: 'a'
+},
+{
+pergunta: 'Quem foi o físico responsável pela formulação da teoria da relatividade?',
+a: 'Isaac Newton',
+b: 'Albert Einstein',
+c: 'Galileu Galilei',
+correta: 'b'
+},
+{
+pergunta: 'Qual é o rio mais extenso do mundo?',
+a: 'Nilo',
+b: 'Amazonas',
+c: 'Mississippi',
+correta: 'b'
+},
+{
+pergunta: 'Qual é o menor país do mundo em área territorial?',
+a: 'Vaticano',
+b: 'Mônaco',
+c: 'Nauru',
+correta: 'a'
+},
+{
+pergunta: 'Quem foi o criador do telefone?',
+a: 'Nikola Tesla',
+b: 'Alexander Graham Bell',
+c: 'Thomas Edison',
+correta: 'b'
+},
+{
+pergunta: 'Quantos elementos químicos a tabela periódica possui atualmente?',
+a: '112',
+b: '118',
+c: '120',
+correta: 'b'
+},
+{
+pergunta: 'Quem escreveu a peça de teatro "Romeu e Julieta"?',
+a: 'William Shakespeare',
+b: 'Charles Dickens',
+c: 'Jane Austen',
+correta: 'a'
+},
 {
     pergunta:'A terra é...',
     a:'Plana',
     b:'Redonda',
     c:'Quadrada',
+    correta:'b'
+},
+{
+    pergunta:'Quais as duas datas que são comemoradas em novembro?',
+    a:'Independência do Brasil e Dia da Bandeira',
+    b:'Proclamação da República e Dia Nacional da Consciência Negra',
+    c:'Black Friday e Dia da Árvore',
     correta:'b'
 },
 {
