@@ -469,14 +469,14 @@ continuar.addEventListener('click',reiniciar)
 let questoes = []
  
 function aleatorio(){//Gera um numero aleatorio
-    return Math.round(Math.random() * 20)
+    return Math.round(Math.random() * Number(vetQuiz.length - 1))
 }
 
 function enbaralhar(pergs){
 
     for(let i = 0; questoes.length <= pergs; i++){//Executa enquanto o questoes não tiver 10 posiçãos
         let random = aleatorio() // recebe o valor retornado da função + p
-
+        console.log(random);
         if(questoes.indexOf(random) == -1){ //Verifica se à o numero gerado ja tem no questoes
             questoes.push(random) // adiciona no questoes
         }
